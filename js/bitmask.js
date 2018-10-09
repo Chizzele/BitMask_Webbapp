@@ -56,7 +56,7 @@ $(document).ready(function(){
       }else{
         resultArray = [0,0,0,0,0,0,0,0];
       }
-      resultObject.val(baseString);
+      resultObject.val(resultArray.join(''));
     }else{
       resultObject.val('no');
     }

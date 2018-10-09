@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+      var devl = true;
+    </script>
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/bitmask.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3> String = <input type="text" id="baseString" maxlength="8" name="baseString" value="00000000"></h3>
+    <select class="" id="bitmaskSelect"  name="bitmaskSelect">
+      <option selected value="none"> none </option>
+      <option  value="XOR"> XOR </option>
+      <option  value="AND"> AND </option>
+      <option  value="OR"> OR </option>
+    </select>
+    <h3>Bitmask =<input type="text" maxlength="8" id='bitmaskString' name="bitmaskString" value="00000000"></h3>
+    <h3>Result =<input type="text" id='result' name="result" value="00000000"></h3>
+  </body>
+</html>
