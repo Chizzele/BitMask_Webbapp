@@ -6,19 +6,53 @@
     </script>
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/bitmask.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <h3> String = <input type="text" id="baseString" maxlength="8" name="baseString" value="00000000"></h3>
-    <select class="" id="bitmaskSelect"  name="bitmaskSelect">
-      <option selected value="none"> none </option>
-      <option  value="XOR"> XOR </option>
-      <option  value="AND"> AND </option>
-      <option  value="OR"> OR </option>
-    </select>
-    <h3>Bitmask =<input type="text" maxlength="8" id='bitmaskString' name="bitmaskString" value="00000000"></h3>
-    <h3>Result =<input type="text" id='result' name="result" value="00000000"></h3>
+    <div class="container tableCenter">
+      <div class="tableCellCenter">
+        <div class="calcCont">
+          <h1 class="centerText">Bitwise Calulator</h1>
+          <div class="form-group row">
+            <label for="baseString" class="col-2 col-form-label">BaseByte:</label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="baseString" maxlength="8" name="baseString" value="00000000">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="bitmaskSelect" class="col-2 col-form-label">Operator:</label>
+            <div class="col-10">
+              <select class="form-control" id="bitmaskSelect"  name="bitmaskSelect">
+                <option selected value="none"> none </option>
+                <option  value="XOR"> XOR </option>
+                <option  value="AND"> AND </option>
+                <option  value="OR"> OR </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="bitmaskString" class="col-2 col-form-label">BitMask:</label>
+            <div class="col-10">
+              <input type="text" class="form-control" maxlength="8" id='bitmaskString' name="bitmaskString" value="00000000">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="result" class="col-2 col-form-label">Result:</label>
+            <div class="col-10">
+              <input class="form-control" type="text" disabled id='result' name="result" value="00000000">
+            </div>
+          </div>
+          <div class="form-group row hidden">
+            <div class="col-12">
+              <button type="button" id="addMask" class="btn btn-primary floatRight" name="button"> Add Mask </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -58,7 +58,23 @@ $(document).ready(function(){
       }
       resultObject.val(resultArray.join(''));
     }else{
-      resultObject.val('no');
+      setValidation('invalid');
+      resultObject.val('BaseByte or Bitmask is invalid');
+    }
+  }
+
+  // Sets the bootstrap validation for various states
+  function setValidation(state){
+    if(state == 'valid'){
+      bitmaskObject.removeClass('was-validated');
+      baseStringObject.removeClass('was-validated');
+      bitmaskObject.addClass('badVal');
+      baseStringObject.addClass('badVal');
+    }else{
+      bitmaskObject.removeClass('was-validated');
+      baseStringObject.removeClass('was-validated');
+      bitmaskObject.addClass('badVal');
+      baseStringObject.addClass('badVal');
     }
   }
 });
@@ -74,6 +90,7 @@ function validInput(input1, input2){
         flag = 0;
       }else{
         flag = 1
+        break;
       }
     }
     if(flag == 1){
